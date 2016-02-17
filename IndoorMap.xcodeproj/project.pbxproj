@@ -126,6 +126,7 @@
 				TargetAttributes = {
 					AE97641B1C1F084E0058A4DC = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 8S8V9FRYQP;
 					};
 				};
 			};
@@ -342,10 +343,13 @@
 			baseConfigurationReference = 6674EB1B493523897B66E749 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = IndoorMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.estimote.IndoorMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = IndoorMap/ObjCBridge.h;
 			};
 			name = Debug;
@@ -355,10 +359,13 @@
 			baseConfigurationReference = 9458C2843FD439BBC729B719 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = IndoorMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.estimote.IndoorMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = IndoorMap/ObjCBridge.h;
 			};
 			name = Release;

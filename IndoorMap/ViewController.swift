@@ -29,7 +29,7 @@ class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
             EILPoint(x:484, y:0)
         ])
         
-        let mint_1_position = EILOrientedPoint(x: 484, y: 371);
+        let mint_1_position = EILOrientedPoint(x: 308, y: 371);
         let blueberry_1_position = EILOrientedPoint(x: 484, y: 208);
         let ice_1_position = EILOrientedPoint(x: 275, y: 0);
         let blueberry_2_position = EILOrientedPoint(x: 0, y: 167);
