@@ -20,7 +20,7 @@ class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
         super.viewDidLoad()
 
         // You can get them by adding your app on https://cloud.estimote.com/#/apps
-        ESTConfig.setupAppID("soundspace-o3k", andAppToken: "9f572ccb81ddc5ce01e6c8745466ffe0")
+        // ESTConfig.setupAppID("soundspace-o3k", andAppToken: "9f572ccb81ddc5ce01e6c8745466ffe0")
 
         // Grab the path, make sure to add it to your project!
         //let coinSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("coin", ofType: "wav")!)
@@ -34,32 +34,32 @@ class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
         let locationBuilder: EILLocationBuilder = EILLocationBuilder()
         locationBuilder.setLocationBoundaryPoints([
             EILPoint(x:0, y:0),
-            EILPoint(x:0, y:371),
-            EILPoint(x:484, y:371),
-            EILPoint(x:484, y:0)
+            EILPoint(x:0, y:3.71),
+            EILPoint(x:4.84, y:3.71),
+            EILPoint(x:4.84, y:0)
         ])
         
-        let mint_1_position = EILOrientedPoint(x: 308, y: 371);
-        let blueberry_1_position = EILOrientedPoint(x: 484, y: 208);
-        let ice_1_position = EILOrientedPoint(x: 275, y: 0);
-        let blueberry_2_position = EILOrientedPoint(x: 0, y: 167);
+        let mint_1_position = EILOrientedPoint(x: 3.08, y: 3.71);
+        let blueberry_1_position = EILOrientedPoint(x: 4.84, y: 2.08);
+        let ice_1_position = EILOrientedPoint(x: 2.75, y: 0);
+        let blueberry_2_position = EILOrientedPoint(x: 0, y: 1.67);
         locationBuilder.addBeaconWithIdentifier("E649946E-017B-43C1-A1CE-E8E1DDD4ADE7", withPosition: ice_1_position)
         locationBuilder.addBeaconWithIdentifier("7A4E3BDA-D5A2-4479-BA15-F0C0558BDA32", withPosition: blueberry_2_position)
         locationBuilder.addBeaconWithIdentifier("062E73C6-450D-4183-A179-14BDB8A33572", withPosition: blueberry_1_position)
         locationBuilder.addBeaconWithIdentifier("A6B7AFB5-E91C-4CED-ABE9-99AFA2891DC7", withPosition: mint_1_position)
 
         
-        //self.location = locationBuilder.build()
-        //self.locationView.showTrace = true
-        //self.locationView.rotateOnPositionUpdate = false
+        self.location = locationBuilder.build()
+        self.locationView.showTrace = true
+        self.locationView.showWallLengthLabels = true
+        self.locationView.rotateOnPositionUpdate = false
         
-        //self.locationView.drawLocation(location)
-        //self.locationManager.startPositionUpdatesForLocation(self.location)
-        //locationBuilder.locationOrientation = 0
+        self.locationView.drawLocation(location)
+        self.locationManager.startPositionUpdatesForLocation(self.location)
 
         // You will find the identifier on https://cloud.estimote.com/#/locations
         /*
-        let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "<#my-location#>")
+        let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "my-location")
         fetchLocationRequest.sendRequestWithCompletion { (location, error) in
             if let location = location {
                 self.location = location

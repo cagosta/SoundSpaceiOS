@@ -16,7 +16,10 @@
 {
     
     NSURL *url = [NSURL URLWithString:@"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"];
-                  
+    self.player = [AVPlayer playerWithURL:url];
+    [self.player play];
+    
+    
                   // You may find a test stream at <http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8>.
                   
     //self.playerItem = [AVPlayerItem playerItemWithURL:url];
@@ -26,8 +29,7 @@
     //self.player = [AVPlayer playerWithPlayerItem:self.playerItem];
     
     
-    self.player = [AVPlayer playerWithURL:url];
-    [self.player play];
+
     //NSLog(@"Player created:%d", self.player.status);
     /*
     NSString *radioURL = @"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"; //this url must valid
