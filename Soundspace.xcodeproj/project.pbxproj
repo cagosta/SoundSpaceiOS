@@ -13,6 +13,7 @@
 		AE9764251C1F084E0058A4DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9764231C1F084E0058A4DC /* Main.storyboard */; };
 		AE9764271C1F084E0058A4DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE9764261C1F084E0058A4DC /* Assets.xcassets */; };
 		AE97642A1C1F084E0058A4DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9764281C1F084E0058A4DC /* LaunchScreen.storyboard */; };
+		F1D61C771C752F380081D49B /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1D61C761C752F380081D49B /* AudioPlayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		AE97642B1C1F084E0058A4DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE97643C1C1F09810058A4DC /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
 		B842E6E914CE9142DCD4A972 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1D61C761C752F380081D49B /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
+		F1D61C781C752FCB0081D49B /* AudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,8 @@
 				AE9764281C1F084E0058A4DC /* LaunchScreen.storyboard */,
 				AE97642B1C1F084E0058A4DC /* Info.plist */,
 				AE97643C1C1F09810058A4DC /* ObjCBridge.h */,
+				F1D61C761C752F380081D49B /* AudioPlayer.m */,
+				F1D61C781C752FCB0081D49B /* AudioPlayer.h */,
 			);
 			path = IndoorMap;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE9764221C1F084E0058A4DC /* ViewController.swift in Sources */,
+				F1D61C771C752F380081D49B /* AudioPlayer.m in Sources */,
 				AE9764201C1F084E0058A4DC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

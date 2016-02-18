@@ -4,13 +4,16 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
 
     let locationManager = EILIndoorLocationManager()
-
+    let audioPlayer = AudioPlayer()
+    
     var location: EILLocation!
-
+    
+    
     @IBOutlet weak var locationView: EILIndoorLocationView!
 
     override func viewDidLoad() {
@@ -19,6 +22,13 @@ class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
         // You can get them by adding your app on https://cloud.estimote.com/#/apps
         ESTConfig.setupAppID("soundspace-o3k", andAppToken: "9f572ccb81ddc5ce01e6c8745466ffe0")
 
+        // Grab the path, make sure to add it to your project!
+        //let coinSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("coin", ofType: "wav")!)
+
+
+        self.audioPlayer.start();
+
+        
         self.locationManager.delegate = self
 
         let locationBuilder: EILLocationBuilder = EILLocationBuilder()
@@ -37,13 +47,14 @@ class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
         locationBuilder.addBeaconWithIdentifier("7A4E3BDA-D5A2-4479-BA15-F0C0558BDA32", withPosition: blueberry_2_position)
         locationBuilder.addBeaconWithIdentifier("062E73C6-450D-4183-A179-14BDB8A33572", withPosition: blueberry_1_position)
         locationBuilder.addBeaconWithIdentifier("A6B7AFB5-E91C-4CED-ABE9-99AFA2891DC7", withPosition: mint_1_position)
+
         
-        self.location = locationBuilder.build()
-        self.locationView.showTrace = true
-        self.locationView.rotateOnPositionUpdate = false
+        //self.location = locationBuilder.build()
+        //self.locationView.showTrace = true
+        //self.locationView.rotateOnPositionUpdate = false
         
-        self.locationView.drawLocation(location)
-        self.locationManager.startPositionUpdatesForLocation(self.location)
+        //self.locationView.drawLocation(location)
+        //self.locationManager.startPositionUpdatesForLocation(self.location)
         //locationBuilder.locationOrientation = 0
 
         // You will find the identifier on https://cloud.estimote.com/#/locations
