@@ -17,7 +17,7 @@ class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
         super.viewDidLoad()
 
         // You can get them by adding your app on https://cloud.estimote.com/#/apps
-        ESTConfig.setupAppID("soundspace-o3k", andAppToken: "9f572ccb81ddc5ce01e6c8745466ffe0")
+        // ESTConfig.setupAppID("soundspace-o3k", andAppToken: "9f572ccb81ddc5ce01e6c8745466ffe0")
 
         self.locationManager.delegate = self
 
@@ -40,15 +40,15 @@ class ViewController: UIViewController, EILIndoorLocationManagerDelegate {
         
         self.location = locationBuilder.build()
         self.locationView.showTrace = true
+        self.locationView.showWallLengthLabels = true
         self.locationView.rotateOnPositionUpdate = false
         
         self.locationView.drawLocation(location)
         self.locationManager.startPositionUpdatesForLocation(self.location)
-        //locationBuilder.locationOrientation = 0
 
         // You will find the identifier on https://cloud.estimote.com/#/locations
         /*
-        let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "<#my-location#>")
+        let fetchLocationRequest = EILRequestFetchLocation(locationIdentifier: "my-location")
         fetchLocationRequest.sendRequestWithCompletion { (location, error) in
             if let location = location {
                 self.location = location
