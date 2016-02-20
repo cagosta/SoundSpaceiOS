@@ -1,3 +1,5 @@
-platform :ios, '8.0'
+platform :ios, '9.1'
+use_frameworks!
 
 pod 'EstimoteIndoorSDK'
+pod 'Alamofire', '~> 3.0'

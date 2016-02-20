@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		33483AB48225761E3A3859C3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B842E6E914CE9142DCD4A972 /* libPods.a */; };
+		0AA434F80CCE4F92507CD769 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9521189B8256A52AD21D91 /* Pods.framework */; };
 		AE9764201C1F084E0058A4DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97641F1C1F084E0058A4DC /* AppDelegate.swift */; };
 		AE9764221C1F084E0058A4DC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9764211C1F084E0058A4DC /* ViewController.swift */; };
 		AE9764251C1F084E0058A4DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE9764231C1F084E0058A4DC /* Main.storyboard */; };
@@ -19,6 +19,7 @@
 /* Begin PBXFileReference section */
 		6674EB1B493523897B66E749 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9458C2843FD439BBC729B719 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9B9521189B8256A52AD21D91 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE97641C1C1F084E0058A4DC /* Soundspace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soundspace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE97641F1C1F084E0058A4DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9764211C1F084E0058A4DC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,7 +28,6 @@
 		AE9764291C1F084E0058A4DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE97642B1C1F084E0058A4DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE97643C1C1F09810058A4DC /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
-		B842E6E914CE9142DCD4A972 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D61C761C752F380081D49B /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
 		F1D61C781C752FCB0081D49B /* AudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33483AB48225761E3A3859C3 /* libPods.a in Frameworks */,
+				0AA434F80CCE4F92507CD769 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,7 +47,7 @@
 		46CEF5E527300A46902553CF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B842E6E914CE9142DCD4A972 /* libPods.a */,
+				9B9521189B8256A52AD21D91 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -102,8 +102,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE97642E1C1F084E0058A4DC /* Build configuration list for PBXNativeTarget "Soundspace" */;
 			buildPhases = (
-				AE97643D1C1F12B30058A4DC /* Check TODOs */,
 				A38AA211F160D92DEBDA2355 /* Check Pods Manifest.lock */,
+				AE97643D1C1F12B30058A4DC /* Check TODOs */,
 				AE9764181C1F084E0058A4DC /* Sources */,
 				AE9764191C1F084E0058A4DC /* Frameworks */,
 				AE97641A1C1F084E0058A4DC /* Resources */,
@@ -131,7 +131,7 @@
 				TargetAttributes = {
 					AE97641B1C1F084E0058A4DC = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 8S8V9FRYQP;
+						DevelopmentTeam = XY8UT74DTK;
 					};
 				};
 			};
@@ -352,8 +352,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = IndoorMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "soundspace-o3k";
+				PRODUCT_BUNDLE_IDENTIFIER = "soundspace-dev";
 				PRODUCT_NAME = Soundspace;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = IndoorMap/ObjCBridge.h;
@@ -368,8 +369,9 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = IndoorMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "soundspace-o3k";
+				PRODUCT_BUNDLE_IDENTIFIER = "soundspace-dev";
 				PRODUCT_NAME = Soundspace;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = IndoorMap/ObjCBridge.h;
