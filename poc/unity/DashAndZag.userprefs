@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/GameController.js">
+    <Files>
+      <File FileName="Assets/MoveAround.js" Line="44" Column="1" />
+      <File FileName="Assets/FinishLineRender.js" Line="3" Column="1" />
+      <File FileName="Assets/FinishLineDetection.js" Line="10" Column="48" />
+      <File FileName="Assets/ObstacleLauncher.js" Line="9" Column="38" />
+      <File FileName="Assets/GameController.js" Line="9" Column="1" />
+      <File FileName="Assets/FanReaction.js" Line="3" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
