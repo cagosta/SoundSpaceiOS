@@ -131,7 +131,7 @@
 				TargetAttributes = {
 					AE97641B1C1F084E0058A4DC = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = XY8UT74DTK;
+						DevelopmentTeam = 8S8V9FRYQP;
 					};
 				};
 			};
@@ -354,7 +354,7 @@
 				INFOPLIST_FILE = IndoorMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "soundspace-dev";
+				PRODUCT_BUNDLE_IDENTIFIER = "soundspace-devCedric";
 				PRODUCT_NAME = Soundspace;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = IndoorMap/ObjCBridge.h;
@@ -371,7 +371,7 @@
 				INFOPLIST_FILE = IndoorMap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "soundspace-dev";
+				PRODUCT_BUNDLE_IDENTIFIER = "soundspace-devCedric";
 				PRODUCT_NAME = Soundspace;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = IndoorMap/ObjCBridge.h;
