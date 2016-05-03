@@ -42,16 +42,25 @@ function Update () {
 
     simulator();
 
-   var controller : CharacterController = GetComponent(CharacterController);
+    /* Move with estimote messages */
+
+    var controller : CharacterController = GetComponent(CharacterController);
     controller.transform.position.x = Mathf.LerpAngle(controller.transform.position.x, _position.x, positionDamping * Time.deltaTime);
     controller.transform.position.z = Mathf.LerpAngle(controller.transform.position.z, _position.z, positionDamping * Time.deltaTime);
     
+    // Rotation with smooth (possibly buggy)
     _rotation.y = Mathf.LerpAngle(_rotation.y, _rotationTarget, _rotationTarget * Time.deltaTime);
     controller.transform.rotation = Quaternion.EulerAngles(_rotation);
-     
-    /*
+    // Raw rotation update
+    // controller.transform.rotation.y = _rotationTarget
+    // controller.transform.rotation = Quaternion.EulerAngles(_rotation);
     
-        var player = GameObject.Find("Player");
+
+    /*
+    Move with pad (comment above)
+
+
+    var player = GameObject.Find("Player");
     player.transform.position = _position;
     player.transform.rotation = Quaternion.EulerAngles(_rotation);
      
