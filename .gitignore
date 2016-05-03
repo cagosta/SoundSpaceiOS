@@ -29,7 +29,8 @@ xcuserdata
 *.xcuserstate
 *.xcscmblueprint
 
-poc/unity/Temp/*
+unity/Temp/*
+unity/Library/ShaderCache/*
 
 ## Obj-C/Swift specific
 *.hmap
