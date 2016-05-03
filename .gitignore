@@ -29,6 +29,8 @@ xcuserdata
 *.xcuserstate
 *.xcscmblueprint
 
+poc/unity/Temp/*
+
 ## Obj-C/Swift specific
 *.hmap
 *.ipa

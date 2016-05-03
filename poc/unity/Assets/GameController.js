@@ -21,6 +21,8 @@ function Awake() {
 }
 
 function OnGUI() { 
+    startGame();
+    /*
     GUI.skin.font = gameMessageFont;
     GUI.color = Color.yellow;
     GUI.backgroundColor = Color.black;
@@ -44,47 +46,14 @@ function OnGUI() {
             startGame();
         }
     }   
+    */
 }
 
 function Update() { 
-    if (!gameRunning)
-        return; 
-        
-    // Keep track of time and display a countdown
-    gameTimeRemaining -= Time.deltaTime;
-    if (gameTimeRemaining <= 0) {
-        timedOut = true; 
-        gameRunning = false;
-        
-        // Play the sound of defeat
-        fanReactionScript.playSoundOfVictory(false);
-    }
+
 }
 
 function startGame() {
-    // Reset if starting a new game
-    gameTimeRemaining = gameTimeAllowed; 
-    timedOut = false;
-    missionCompleted = false;
-       
-    // Change button text after the initial run
-    playButtonText = "Play Again";
-    
-    // Turn off the intro text
-    for (var child : Transform in intro ) {
-        child.gameObject.GetComponent.<Renderer>().enabled = false;
-    }
-    
-    // Clean out any enemy objects
-    var enemies = GameObject.FindGameObjectsWithTag("Enemy");
-    for (var enemy : GameObject in enemies) {
-        Destroy ( enemy);
-    }
-    // Call all game reset methods
-    for (var gameObjectReceiver : GameObject in gameObjectsToReset) {
-        gameObjectReceiver.SendMessage("resetGame", null, SendMessageOptions.DontRequireReceiver);
-    }
-    
     // Kick off the game
     gameRunning = true;
 }
