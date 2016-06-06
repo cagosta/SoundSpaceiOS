@@ -40,10 +40,10 @@ function Awake() {
 function Update () {
 
 
-    simulator();
+    //simulator();
 
     /* Move with estimote messages */
-
+    /*
     var controller : CharacterController = GetComponent(CharacterController);
     controller.transform.position.x = Mathf.LerpAngle(controller.transform.position.x, _position.x, positionDamping * Time.deltaTime);
     controller.transform.position.z = Mathf.LerpAngle(controller.transform.position.z, _position.z, positionDamping * Time.deltaTime);
@@ -58,12 +58,12 @@ function Update () {
 
     /*
     Move with pad (comment above)
-
+   
 
     var player = GameObject.Find("Player");
     player.transform.position = _position;
     player.transform.rotation = Quaternion.EulerAngles(_rotation);
-     
+      */
     var controller : CharacterController = GetComponent(CharacterController);
 
     
@@ -78,7 +78,7 @@ function Update () {
     var curSpeed = speed * movePos;
     
     controller.SimpleMove(forward * curSpeed);
-    */
+
 }
 
 function UpdatePosition(message: String){ 
